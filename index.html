@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4b0d19">
+
+<title>Pankhuri & Dheeraj | Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --maroon:#681526;
+    --dark:#350912;
+    --gold:#c9a052;
+    --light-gold:#e7c77c;
+    --cream:#fff8ed;
+    --beige:#f5eadc;
+    --text:#43231e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--cream);
+    color:var(--text);
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,160,82,.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #28070e,
+            #681526,
+            #350912
+        );
+
+    transition:opacity 1.3s ease;
+}
+
+.opening-content{
+    padding:30px;
+    animation:openingAppear 2s ease;
+}
+
+@keyframes openingAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.opening-small{
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    opacity:.8;
+    margin-bottom:25px;
+}
+
+.opening-names{
+    font-family:'Great Vibes',cursive;
+    color:var(--light-gold);
+    font-size:clamp(65px,14vw,125px);
+    line-height:.85;
+    font-weight:400;
+}
+
+.opening-date{
+    margin-top:35px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;
+    letter-spacing:4px;
+}
+
+.open-btn{
+    margin-top:40px;
+
+    padding:14px 34px;
+
+    border:1px solid var(--gold);
+    border-radius:50px;
+
+    background:transparent;
+    color:white;
+
+    cursor:pointer;
+
+    letter-spacing:3px;
+    font-size:10px;
+
+    transition:.4s;
+}
+
+.open-btn:hover{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-button{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    z-index:500;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:1px solid var(--gold);
+
+    background:rgba(53,9,18,.85);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* =========================
+   PETALS
+========================= */
+
+.petal{
+    position:fixed;
+    top:-30px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:petalFall linear forwards;
+
+    opacity:.7;
+}
+
+@keyframes petalFall{
+
+    0%{
+        transform:translateY(-30px) rotate(0);
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+    }
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            rgba(42,7,14,.55),
+            rgba(42,7,14,.78)
+        ),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.hero-content{
+    animation:heroIn 2s ease;
+    padding:20px;
+}
+
+@keyframes heroIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-subtitle{
+    font-size:12px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    color:var(--light-gold);
+    font-size:clamp(70px,15vw,150px);
+    font-weight:400;
+}
+
+.hero-date{
+    margin-top:25px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:27px;
+
+    letter-spacing:4px;
+}
+
+.scroll{
+    margin-top:70px;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    opacity:.75;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    50%{
+        transform:translateY(10px);
+    }
+
+}
+
+/* =========================
+   COMMON
+========================= */
+
+section{
+    padding:95px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title span{
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+}
+
+.section-title h2{
+    margin-top:7px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:58px;
+
+    font-weight:400;
+
+    color:var(--maroon);
+}
+
+.divider{
+    width:70px;
+    height:1px;
+
+    background:var(--gold);
+
+    margin:15px auto;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    background:var(--cream);
+    text-align:center;
+}
+
+.intro-text{
+    max-width:760px;
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:27px;
+
+    line-height:1.7;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple{
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(201,160,82,.12),
+            transparent 30%
+        ),
+        var(--beige);
+}
+
+.couple-grid{
+    display:grid;
+
+    grid-template-columns:1fr 100px 1fr;
+
+    gap:30px;
+
+    align-items:center;
+}
+
+.person{
+    text-align:center;
+}
+
+.person img{
+    width:270px;
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:150px 150px 10px 10px;
+
+    border:6px solid white;
+
+    box-shadow:
+        0 20px 45px rgba(53,9,18,.18);
+}
+
+.person h3{
+    margin-top:20px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:var(--maroon);
+
+    font-size:50px;
+
+    font-weight:400;
+}
+
+.person p{
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    opacity:.6;
+}
+
+.heart{
+    text-align:center;
+
+    color:var(--maroon);
+
+    font-size:55px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+}
+
+.countdown-section .section-title h2{
+    color:var(--light-gold);
+}
+
+.countdown{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.time{
+    width:115px;
+
+    padding:22px 10px;
+
+    border:1px solid rgba(231,199,124,.4);
+
+    background:rgba(255,255,255,.03);
+}
+
+.time strong{
+    display:block;
+
+    color:var(--light-gold);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:45px;
+
+    font-weight:500;
+}
+
+.time span{
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.events{
+    background:var(--cream);
+}
+
+.events-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.event{
+    background:white;
+
+    border:1px solid rgba(201,160,82,.35);
+
+    padding:38px 25px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.event:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+}
+
+.event-icon{
+    font-size:33px;
+
+    margin-bottom:16px;
+}
+
+.event h3{
+    color:var(--maroon);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.event-date{
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.event-time{
+    font-size:11px;
+
+    margin-bottom:8px;
+}
+
+.event p{
+    font-size:11px;
+
+    line-height:1.7;
+
+    opacity:.7;
+}
+
+/* =========================
+   SCRATCH CARD
+========================= */
+
+.scratch-section{
+    background:
+        linear-gradient(
+            rgba(53,9,18,.94),
+            rgba(53,9,18,.94)
+        ),
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+
+    color:white;
+
+    text-align:center;
+}
+
+.scratch-section .section-title h2{
+    color:var(--light-gold);
+}
+
+.scratch-card{
+    width:min(380px,92vw);
+
+    height:220px;
+
+    position:relative;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border:5px solid #d5ac5d;
+
+    border-radius:12px;
+
+    background:#fff7e8;
+
+    box-shadow:0 25px 55px rgba(0,0,0,.35);
+}
+
+.scratch-message{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--maroon);
+}
+
+.scratch-message small{
+    font-size:10px;
+
+    letter-spacing:3px;
+}
+
+.scratch-message h3{
+    margin:8px 0;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:50px;
+
+    font-weight:400;
+}
+
+.scratch-message p{
+    font-size:11px;
+}
+
+#scratchCanvas{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    cursor:pointer;
+
+    z-index:2;
+}
+
+.scratch-note{
+    margin-top:20px;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    opacity:.7;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#f4e8d9;
+}
+
+.gallery-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+}
+
+.gallery-grid img{
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.02);
+}
+
+/* =========================
+   VENUE
+========================= */
+
+.venue{
+    background:var(--cream);
+
+    text-align:center;
+}
+
+.venue-card{
+    max-width:750px;
+
+    margin:auto;
+}
+
+.venue-card h3{
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    font-weight:400;
+
+    color:var(--maroon);
+}
+
+.venue-card p{
+    margin:15px 0 25px;
+
+    line-height:1.8;
+
+    font-size:13px;
+}
+
+.map-button{
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    background:var(--maroon);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.map-button:hover{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+    background:var(--dark);
+
+    color:white;
+}
+
+.rsvp .section-title h2{
+    color:var(--light-gold);
+}
+
+.rsvp-form{
+    max-width:600px;
+
+    margin:auto;
+}
+
+.input{
+    margin-bottom:15px;
+}
+
+.input input,
+.input select,
+.input textarea{
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid rgba(255,255,255,.22);
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    outline:none;
+
+    border-radius:2px;
+}
+
+.input input::placeholder,
+.input textarea::placeholder{
+    color:rgba(255,255,255,.55);
+}
+
+.input select option{
+    color:#222;
+}
+
+.input textarea{
+    height:120px;
+
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    background:var(--gold);
+
+    color:var(--dark);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.submit:hover{
+    background:var(--light-gold);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#23060c;
+
+    color:white;
+
+    text-align:center;
+
+    padding:75px 20px;
+}
+
+.footer-names{
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:var(--light-gold);
+}
+
+footer p{
+    margin-top:15px;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    opacity:.55;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:55px;
+    height:55px;
+
+    z-index:400;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+
+    inset:0;
+
+    z-index:10000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.94);
+
+    padding:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+
+    max-height:90%;
+
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.animate{
+    opacity:0;
+    transform:translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.animate.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    section{
+        padding:75px 18px;
+    }
+
+    .hero{
+        background-attachment:scroll;
+    }
+
+    .couple-grid{
+        grid-template-columns:1fr;
+    }
+
+    .heart{
+        transform:rotate(90deg);
+
+        margin:-10px 0;
+    }
+
+    .events-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid img{
+        height:220px;
+    }
+
+    .person img{
+        width:235px;
+        height:300px;
+    }
+
+    .section-title h2{
+        font-size:48px;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .hero h1{
+        font-size:68px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:350px;
+    }
+
+    .time{
+        width:85px;
+    }
+
+    .time strong{
+        font-size:34px;
+    }
+
+    .opening-names{
+        font-size:75px;
+    }
+
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     OPENING SCREEN
+================================================== -->
+
+<div id="opening">
+
+    <div class="opening-content">
+
+        <div class="opening-small">
+            Together with their families
+        </div>
+
+        <div class="opening-names">
+            Pankhuri<br>
+            &<br>
+            Dheeraj
+        </div>
+
+        <div class="opening-date">
+            25 • FEBRUARY • 2027
+        </div>
+
+        <button
+            class="open-btn"
+            onclick="openInvitation()"
+        >
+            OPEN INVITATION
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     MUSIC BUTTON
+================================================== -->
+
+<button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()"
+    aria-label="Toggle music"
+>
+    ♪
+</button>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-subtitle">
+            We are getting married
+        </div>
+
+        <h1>
+            Pankhuri & Dheeraj
+        </h1>
+
+        <div class="hero-date">
+            25 February 2027
+        </div>
+
+        <div class="scroll">
+            ↓ SCROLL TO EXPLORE ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     INTRODUCTION
+================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="section-title animate">
+
+            <span>
+                A beautiful beginning
+            </span>
+
+            <h2>
+                Two Hearts, One Journey
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <p class="intro-text animate">
+
+            With hearts full of love and families
+            filled with happiness, we invite you
+            to celebrate the beautiful beginning
+            of Pankhuri and Dheeraj's forever.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     COUPLE
+================================================== -->
+
+<section class="couple">
+
+    <div class="container">
+
+        <div class="section-title animate">
+
+            <span>
+                The couple
+            </span>
+
+            <h2>
+                Meet The Two
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="couple-grid">
+
+            <div class="person animate">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=90"
+                    alt="Pankhuri"
+                >
+
+                <h3>
+                    Pankhuri
+                </h3>
+
+                <p>
+                    The Bride
+                </p>
+
+            </div>
+
+
+            <div class="heart">
+                ♥
+            </div>
+
+
+            <div class="person animate">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=90"
+                    alt="Dheeraj"
+                >
+
+                <h3>
+                    Dheeraj
+                </h3>
+
+                <p>
+                    The Groom
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     COUNTDOWN
+================================================== -->
+
+<section class="countdown-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                Save the date
+            </span>
+
+            <h2>
+                Counting Every Moment
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="countdown">
+
+            <div class="time">
+                <strong id="days">00</strong>
+                <span>Days</span>
+            </div>
+
+            <div class="time">
+                <strong id="hours">00</strong>
+                <span>Hours</span>
+            </div>
+
+            <div class="time">
+                <strong id="minutes">00</strong>
+                <span>Minutes</span>
+            </div>
+
+            <div class="time">
+                <strong id="seconds">00</strong>
+                <span>Seconds</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     WEDDING FUNCTIONS
+================================================== -->
+
+<section class="events">
+
+    <div class="container">
+
+        <div class="section-title animate">
+
+            <span>
+                The celebrations
+            </span>
+
+            <h2>
+                Wedding Functions
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="events-grid">
+
+
+            <!-- HALDI -->
+
+            <div class="event animate">
+
+                <div class="event-icon">
+                    🌼
+                </div>
+
+                <h3>
+                    Haldi
+                </h3>
+
+                <div class="event-date">
+                    22 February 2027
+                </div>
+
+                <div class="event-time">
+                    7:00 PM
+                </div>
+
+                <p>
+                    Royal Palace, Patna
+                </p>
+
+            </div>
+
+
+            <!-- MEHENDI -->
+
+            <div class="event animate">
+
+                <div class="event-icon">
+                    🌿
+                </div>
+
+                <h3>
+                    Mehendi
+                </h3>
+
+                <div class="event-date">
+                    23 February 2027
+                </div>
+
+                <div class="event-time">
+                    7:00 PM
+                </div>
+
+                <p>
+                    Royal Palace, Patna
+                </p>
+
+            </div>
+
+
+            <!-- SANGEET -->
+
+            <div class="event animate">
+
+                <div class="event-icon">
+                    💃
+                </div>
+
+                <h3>
+                    Sangeet
+                </h3>
+
+                <div class="event-date">
+                    24 February 2027
+                </div>
+
+                <div class="event-time">
+                    7:00 PM
+                </div>
+
+                <p>
+                    Royal Palace, Patna
+                </p>
+
+            </div>
+
+
+            <!-- WEDDING -->
+
+            <div class="event animate">
+
+                <div class="event-icon">
+                    💍
+                </div>
+
+                <h3>
+                    Wedding
+                </h3>
+
+                <div class="event-date">
+                    25 February 2027
+                </div>
+
+                <div class="event-time">
+                    7:00 PM
+                </div>
+
+                <p>
+                    Royal Palace, Patna
+                </p>
+
+            </div>
+
+
+            <!-- RECEPTION -->
+
+            <div class="event animate">
+
+                <div class="event-icon">
+                    🥂
+                </div>
+
+                <h3>
+                    Reception
+                </h3>
+
+                <div class="event-date">
+                    26 February 2027
+                </div>
+
+                <div class="event-time">
+                    7:00 PM
+                </div>
+
+                <p>
+                    Royal Palace, Patna
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SCRATCH CARD
+================================================== -->
+
+<section class="scratch-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                A little surprise
+            </span>
+
+            <h2>
+                Scratch To Reveal
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="scratch-card">
+
+            <div class="scratch-message">
+
+                <small>
+                    THE WEDDING DAY
+                </small>
+
+                <h3>
+                    25 February
+                </h3>
+
+                <p>
+                    Save The Date ♥
+                </p>
+
+            </div>
+
+            <canvas
+                id="scratchCanvas"
+            ></canvas>
+
+        </div>
+
+
+        <p class="scratch-note">
+            ✨ Scratch with your finger or mouse ✨
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PHOTO GALLERY
+================================================== -->
+
+<section class="gallery">
+
+    <div class="container">
+
+        <div class="section-title animate">
+
+            <span>
+                Our memories
+            </span>
+
+            <h2>
+                Photo Gallery
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+
+            <img
+                class="animate"
+                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=90"
+                alt="Wedding memory"
+                onclick="openLightbox(this.src)"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     VENUE
+================================================== -->
+
+<section class="venue">
+
+    <div class="container">
+
+        <div class="section-title animate">
+
+            <span>
+                Come celebrate with us
+            </span>
+
+            <h2>
+                The Wedding Venue
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="venue-card animate">
+
+            <h3>
+                Royal Palace, Patna
+            </h3>
+
+            <p>
+                abc, xyz street,<br>
+                Patna - 800001
+            </p>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Royal+Palace+Patna"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 GET DIRECTIONS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     RSVP
+================================================== -->
+
+<section class="rsvp">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                We would love to hear from you
+            </span>
+
+            <h2>
+                RSVP
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <form
+            class="rsvp-form"
+            id="rsvpForm"
+            onsubmit="sendRSVP(event)"
+        >
+
+
+            <div class="input">
+
+                <input
+                    type="text"
+                    id="guestName"
+                    placeholder="Your Name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input">
+
+                <input
+                    type="tel"
+                    id="guestPhone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input">
+
+                <select
+                    id="attendance"
+                    required
+                >
+
+                    <option value="">
+                        Will you attend?
+                    </option>
+
+                    <option value="Yes, I will be attending ❤️">
+                        Yes, I'll be there ❤️
+                    </option>
+
+                    <option value="Sorry, I won't be able to attend">
+                        Sorry, I can't make it
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input">
+
+                <select id="guests">
+
+                    <option value="1">
+                        1 Guest
+                    </option>
+
+                    <option value="2">
+                        2 Guests
+                    </option>
+
+                    <option value="3">
+                        3 Guests
+                    </option>
+
+                    <option value="4">
+                        4 Guests
+                    </option>
+
+                    <option value="5">
+                        5 Guests
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input">
+
+                <textarea
+                    id="message"
+                    placeholder="Write a message..."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="submit"
+                type="submit"
+            >
+                SEND RSVP ON WHATSAPP
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-names">
+        Pankhuri & Dheeraj
+    </div>
+
+    <p>
+        TWO HEARTS • ONE JOURNEY • FOREVER
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     FLOATING WHATSAPP
+================================================== -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/917479761208"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact on WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- ==================================================
+     LIGHTBOX
+================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"
+>
+
+    <span class="close">
+        ×
+    </span>
+
+    <img
+        id="lightboxImage"
+        alt="Wedding photo"
+    >
+
+</div>
+
+
+<script>
+
+/* ==================================================
+   OPEN INVITATION
+================================================== */
+
+function openInvitation(){
+
+    const opening =
+        document.getElementById("opening");
+
+    opening.style.opacity="0";
+
+    opening.style.pointerEvents="none";
+
+
+    setTimeout(function(){
+
+        opening.style.display="none";
+
+    },1300);
+
+
+    startMusic();
+
+    startPetals();
+
+}
+
+
+/* ==================================================
+   COUNTDOWN
+================================================== */
+
+/*
+   25 February 2027
+   7:00 PM
+   India Standard Time
+*/
+
+const weddingDate =
+    new Date(
+        "2027-02-25T19:00:00+05:30"
+    ).getTime();
+
+
+function updateCountdown(){
+
+    const now =
+        new Date().getTime();
+
+
+    const distance =
+        weddingDate-now;
+
+
+    if(distance<=0){
+
+        document.getElementById("days").innerText="00";
+
+        document.getElementById("hours").innerText="00";
+
+        document.getElementById("minutes").innerText="00";
+
+        document.getElementById("seconds").innerText="00";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance/
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance/
+            (1000*60*60))%24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance/
+            (1000*60))%60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance/1000)%60
+        );
+
+
+    document.getElementById("days").innerText =
+        String(days).padStart(2,"0");
+
+
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+/* ==================================================
+   FALLING FLOWERS
+================================================== */
+
+function createPetal(){
+
+    const petal =
+        document.createElement("div");
+
+
+    petal.className="petal";
+
+
+    const flowers=[
+        "🌸",
+        "🌺",
+        "🌼",
+        "✿",
+        "❀"
+    ];
+
+
+    petal.innerText =
+        flowers[
+            Math.floor(
+                Math.random()*
+                flowers.length
+            )
+        ];
+
+
+    petal.style.left =
+        Math.random()*100+"vw";
+
+
+    petal.style.fontSize =
+        (
+            10+
+            Math.random()*13
+        )+"px";
+
+
+    petal.style.animationDuration =
+        (
+            6+
+            Math.random()*7
+        )+"s";
+
+
+    document.body.appendChild(
+        petal
+    );
+
+
+    setTimeout(
+        function(){
+            petal.remove();
+        },
+        14000
+    );
+
+}
+
+
+let petalsStarted=false;
+
+
+function startPetals(){
+
+    if(petalsStarted)
+        return;
+
+
+    petalsStarted=true;
+
+
+    setInterval(
+        function(){
+            createPetal();
+        },
+        900
+    );
+
+}
+
+
+/* ==================================================
+   SOFT BACKGROUND MUSIC
+================================================== */
+
+let audioContext=null;
+
+let musicPlaying=false;
+
+let musicTimer=null;
+
+
+function startMusic(){
+
+    if(audioContext)
+        return;
+
+
+    try{
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+
+        musicPlaying=true;
+
+
+        document.getElementById(
+            "musicButton"
+        ).innerText="♫";
+
+
+        playSoftNote();
+
+
+    }catch(error){
+
+        console.log(
+            "Audio unavailable"
+        );
+
+    }
+
+}
+
+
+function playSoftNote(){
+
+    if(
+        !audioContext ||
+        !musicPlaying
+    )
+        return;
+
+
+    const notes=[
+        261.63,
+        329.63,
+        392.00,
+        523.25,
+        659.25
+    ];
+
+
+    const frequency =
+        notes[
+            Math.floor(
+                Math.random()*
+                notes.length
+            )
+        ];
+
+
+    const oscillator =
+        audioContext.createOscillator();
+
+
+    const gain =
+        audioContext.createGain();
+
+
+    oscillator.type="sine";
+
+
+    oscillator.frequency.value=
+        frequency;
+
+
+    gain.gain.setValueAtTime(
+        0,
+        audioContext.currentTime
+    );
+
+
+    gain.gain.linearRampToValueAtTime(
+        0.025,
+        audioContext.currentTime+1
+    );
+
+
+    gain.gain.linearRampToValueAtTime(
+        0,
+        audioContext.currentTime+5
+    );
+
+
+    oscillator.connect(gain);
+
+    gain.connect(
+        audioContext.destination
+    );
+
+
+    oscillator.start();
+
+
+    oscillator.stop(
+        audioContext.currentTime+5
+    );
+
+
+    musicTimer =
+        setTimeout(
+            playSoftNote,
+            4200
+        );
+
+}
+
+
+function toggleMusic(){
+
+    const button =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    if(!audioContext){
+
+        startMusic();
+
+        return;
+
+    }
+
+
+    if(
+        audioContext.state===
+        "running"
+    ){
+
+        audioContext.suspend();
+
+        musicPlaying=false;
+
+        button.innerText="♪";
+
+
+    }else{
+
+        audioContext.resume();
+
+        musicPlaying=true;
+
+        button.innerText="♫";
+
+        playSoftNote();
+
+    }
+
+}
+
+
+/* ==================================================
+   SCRATCH CARD
+================================================== */
+
+const canvas =
+    document.getElementById(
+        "scratchCanvas"
+    );
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+function setupScratch(){
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+
+    const dpr =
+        window.devicePixelRatio||1;
+
+
+    canvas.width =
+        rect.width*dpr;
+
+
+    canvas.height =
+        rect.height*dpr;
+
+
+    ctx.scale(
+        dpr,
+        dpr
+    );
+
+
+    ctx.fillStyle="#b18a43";
+
+
+    ctx.fillRect(
+        0,
+        0,
+        rect.width,
+        rect.height
+    );
+
+
+    ctx.fillStyle="#fff0c9";
+
+
+    ctx.font=
+        "600 13px Montserrat";
+
+
+    ctx.textAlign="center";
+
+
+    ctx.fillText(
+        "SCRATCH HERE ✨",
+        rect.width/2,
+        rect.height/2
+    );
+
+}
+
+
+setupScratch();
+
+
+let scratching=false;
+
+
+function scratch(event){
+
+    if(!scratching)
+        return;
+
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+
+    let x;
+    let y;
+
+
+    if(event.touches){
+
+        x =
+            event.touches[0].clientX-
+            rect.left;
+
+
+        y =
+            event.touches[0].clientY-
+            rect.top;
+
+    }else{
+
+        x =
+            event.clientX-
+            rect.left;
+
+
+        y =
+            event.clientY-
+            rect.top;
+
+    }
+
+
+    ctx.globalCompositeOperation=
+        "destination-out";
+
+
+    ctx.beginPath();
+
+
+    ctx.arc(
+        x,
+        y,
+        25,
+        0,
+        Math.PI*2
+    );
+
+
+    ctx.fill();
+
+}
+
+
+canvas.addEventListener(
+    "mousedown",
+    function(){
+        scratching=true;
+    }
+);
+
+
+canvas.addEventListener(
+    "mouseup",
+    function(){
+        scratching=false;
+    }
+);
+
+
+canvas.addEventListener(
+    "mouseleave",
+    function(){
+        scratching=false;
+    }
+);
+
+
+canvas.addEventListener(
+    "mousemove",
+    scratch
+);
+
+
+canvas.addEventListener(
+    "touchstart",
+    function(event){
+
+        scratching=true;
+
+        scratch(event);
+
+    },
+    {passive:false}
+);
+
+
+canvas.addEventListener(
+    "touchmove",
+    function(event){
+
+        event.preventDefault();
+
+        scratch(event);
+
+    },
+    {passive:false}
+);
+
+
+canvas.addEventListener(
+    "touchend",
+    function(){
+
+        scratching=false;
+
+    }
+);
+
+
+/* ==================================================
+   LIGHTBOX
+================================================== */
+
+function openLightbox(src){
+
+    document.getElementById(
+        "lightboxImage"
+    ).src=src;
+
+
+    document.getElementById(
+        "lightbox"
+    ).style.display="flex";
+
+}
+
+
+function closeLightbox(){
+
+    document.getElementById(
+        "lightbox"
+    ).style.display="none";
+
+}
+
+
+/* ==================================================
+   WHATSAPP RSVP
+================================================== */
+
+function sendRSVP(event){
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "guestName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "guestPhone"
+        ).value.trim();
+
+
+    const attendance =
+        document.getElementById(
+            "attendance"
+        ).value;
+
+
+    const guests =
+        document.getElementById(
+            "guests"
+        ).value;
+
+
+    const message =
+        document.getElementById(
+            "message"
+        ).value.trim();
+
+
+    /*
+       WhatsApp number:
+       7479761208
+       India country code:
+       +91
+    */
+
+    const whatsappNumber=
+        "917479761208";
+
+
+    const whatsappMessage=
+
+        "Hello! ❤️\n\n"+
+
+        "I would like to RSVP for the wedding of Pankhuri & Dheeraj.\n\n"+
+
+        "👤 Name: "+
+        name+
+        "\n"+
+
+        "📱 Phone: "+
+        phone+
+        "\n"+
+
+        "💌 Attendance: "+
+        attendance+
+        "\n"+
+
+        "👥 Number of Guests: "+
+        guests+
+        "\n"+
+
+        "💬 Message: "+
+        (
+            message||
+            "No message"
+        )+
+        "\n\n"+
+
+        "Looking forward to celebrating with you! ❤️";
+
+
+    const whatsappURL=
+
+        "https://wa.me/"+
+        whatsappNumber+
+        "?text="+
+        encodeURIComponent(
+            whatsappMessage
+        );
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* ==================================================
+   SCROLL ANIMATIONS
+================================================== */
+
+const observer =
+    new IntersectionObserver(
+        function(entries){
+
+            entries.forEach(
+                function(entry){
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.15
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".animate"
+    )
+    .forEach(
+        function(element){
+
+            observer.observe(
+                element
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
